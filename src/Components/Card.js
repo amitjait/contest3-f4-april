@@ -10,6 +10,8 @@ const Card = ({product}) =>{
     
     function handleClick(e){
         dispatch(addToCart(e.target.id))
+
+        
     }
 
     return (

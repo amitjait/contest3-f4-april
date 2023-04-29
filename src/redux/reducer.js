@@ -1,4 +1,4 @@
-import { FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, ADD_TO_CART, REMOVE_FROM_CART } from "./actionType";
+import { FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, ADD_TO_CART, REMOVE_FROM_CART, RESET_CART } from "./actionType";
 import { combineReducers } from "redux";
 
 const initialState = {
@@ -47,6 +47,11 @@ const cartReducer = (state=cartValue, action) =>{
             return{
                 ...state,
                 items : state.items.filter((item) => item !== action.id)
+            }
+        case RESET_CART:
+            return {
+                ...state,
+                items: []
             }
         default: return state
     }

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, REMOVE_FROM_CART } from "./actionType";
+import { ADD_TO_CART, FETCH_DATA_FAILURE, FETCH_DATA_REQUEST, FETCH_DATA_SUCCESS, REMOVE_FROM_CART, RESET_CART } from "./actionType";
 import axios from "axios";
 
 
@@ -50,3 +50,8 @@ export const removeFromCart = (id) =>{
     }
 }
 
+export const resetCart = () =>{
+    return {
+        type : RESET_CART
+    }
+}
